@@ -1,0 +1,31 @@
+<h1>Find the Air Quality of A City: </h1>
+<div class="formcontainer">
+    <form class="form">
+        <div clas="form-body">
+            <div class="form-row">
+                <div class="label">
+                    <label>City Name</label>
+                </div>
+                <div class="text">
+                    <input class="textbox" type="text" formControlName="cityName"/>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="label">
+                    <label>Lastest</label>
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" formControlName="latest" values="true"/>
+                    <span class="radio-circle"></span>
+                    <span class="radio-btn-val">Yes</span>
+                </div>
+                <div class="radio-btn">
+                    <input type="radio" formControlName="latest" values="false"/>
+                    <span class="radio-circle"></span>
+                    <span class="radio-btn-val">No</span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" (ngSubmit)="onSubmit()">Submit</button>
+    </form>
+</div>
