@@ -1,31 +1,35 @@
-<h1>Find the Air Quality of A City: </h1>
-<div class="formcontainer">
-    <form class="form">
-        <div clas="form-body">
-            <div class="form-row">
-                <div class="label">
-                    <label>City Name</label>
+<div class="mt-4 outer-div">
+    <h1 class="mt-4 title-div"><b>Find the Air Quality of A City: </b></h1>
+    <div class="container">
+        <form [formGroup]="city">
+            <!-- <div clas="form-body"> -->
+                <div class="mt-4 row">
+                    <label for="cityName">City Name: </label>
+                    <input id="cityName" type="text" formControlName="cityName">
+                    <!-- <p>
+                        <mat-form-field class="city-name" appearance="outline">
+                            <mat-label>City Name: </mat-label>
+                            <input matInput formControlName="cityName"/>
+                            <mat-icon matSuffix></mat-icon>
+                            <mat-hint>Hint</mat-hint>
+                        </mat-form-field>
+                    </p> -->
                 </div>
-                <div class="text">
-                    <input class="textbox" type="text" formControlName="cityName"/>
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="label">
+                <div class="mt-5 row">
                     <label>Lastest</label>
+                    <!-- <span class="radio-btn"> -->
+                        <input type="radio" formControlName="latest" values="true"/>
+                        <span class="radio-circle"></span>
+                        <span class="radio-btn-val">Yes</span>
+                    <!-- </span> -->
+                    <!-- <span class="radio-btn"> -->
+                        <input type="radio" formControlName="latest" values="false"/>
+                        <span class="radio-circle"></span>
+                        <span class="radio-btn-val">No</span>
+                    <!-- </span> -->
                 </div>
-                <div class="radio-btn">
-                    <input type="radio" formControlName="latest" values="true"/>
-                    <span class="radio-circle"></span>
-                    <span class="radio-btn-val">Yes</span>
-                </div>
-                <div class="radio-btn">
-                    <input type="radio" formControlName="latest" values="false"/>
-                    <span class="radio-circle"></span>
-                    <span class="radio-btn-val">No</span>
-                </div>
-            </div>
-        </div>
-        <button type="submit" (ngSubmit)="onSubmit()">Submit</button>
-    </form>
+            <!-- </div> -->
+            <button type="submit" (ngSubmit)="onSubmit()">Submit</button>
+        </form>
+    </div>
 </div>

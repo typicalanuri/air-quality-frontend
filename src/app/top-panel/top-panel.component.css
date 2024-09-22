@@ -1,3 +1,31 @@
 .container{
     display:flex;
+    /* flex-direction: row;
+    justify-content: flex-end; */
+    background-color: #B3B1DB;
+    padding: 15px;
+}
+.top-button{
+    /* justify-content: flex-end; */
+    margin-left: auto;
+}
+
+.button-label{
+    display: table-cell;
+    font-size: 18px;
+    margin-left: 8px;
+    min-width: 120px;
+    border-color: black;
+}
+
+/* .anuri-logo{
+    background: url(../../../assets/icons/Anuri\ Fitness\ Brand.png) no-repeat;
+    height: 40px;
+    width: 40px;
+} */
+
+.anuri-label{
+    background-color: #B3B1DB;
+    font-size: large;
+    size: 18px;
 }

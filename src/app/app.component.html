@@ -1,2 +1,16 @@
-<app-top-panel></app-top-panel>
-<!-- <router-outlet></router-outlet> -->
+<app-top-panel (clickedButton)="setcurrentPage($event)"></app-top-panel>
+<div [ngSwitch] ="currentPage">
+    <div *ngSwitchCase="'Home'">
+        <app-home-page></app-home-page>
+    </div>
+    <div *ngSwitchCase="'Air Quality'">
+        <app-airquality></app-airquality>
+    </div>
+    <div *ngSwitchCase="'Explore'">
+        <app-explore-page></app-explore-page>
+    </div>
+    <div *ngSwitchDefault>
+        <app-home-page></app-home-page>
+    </div>
+</div>
+<router-outlet></router-outlet>

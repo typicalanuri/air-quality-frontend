@@ -1,0 +1,19 @@
+.title-div{
+    font-family:'Courier New', Courier, monospace;
+}
+
+.mat-form-field .textbox{
+    background-color: grey;
+    color: white;
+}
+
+
+.city-name {
+    color: white;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.mat-radio-button {
+    margin: 0 12px;
+}

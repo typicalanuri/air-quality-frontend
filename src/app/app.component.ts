@@ -9,9 +9,8 @@ import { ApiService } from './services/api/api.service';
 })
 export class AppComponent {
   title = 'angular-air-quality';
-
   public city!:UntypedFormGroup;
-
+  currentPage: string ='';
   constructor(private formbuilder: UntypedFormBuilder, private apiService: ApiService){}
   
   ngOnInit(): void {
@@ -23,5 +22,10 @@ export class AppComponent {
 
   onSubmit(){
     this.apiService.getWithParams('/quality', this.city);
+  }
+
+  setcurrentPage(data: string){
+    console.log("Current Page: "+ data);
+    this.currentPage = data;
   }
 }
